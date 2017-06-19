@@ -1,5 +1,9 @@
-<ul>
-  <li *ngFor="let review of reviews">
-    {{ review.firstName }}
-  </li>
-</ul>
+<div class="card">
+	<div class="card-content">
+
+		<img src="assets/trustpilot-logo-light-bg-120x18.png" alt="trustpilot-logo">
+
+		<review-detail *ngFor="let review of reviews" [review]="review"></review-detail>
+	</div>
+	
+</div>
