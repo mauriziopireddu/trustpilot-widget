@@ -12,14 +12,19 @@ export class ReviewDetailComponent {
 
   constructor() { }
 
-
   getStartsImg():string {
     if(this.review.starRating != 1)
       return `assets/${this.review.starRating}-stars-260x48.png`;
     return `assets/${this.review.starRating}-star-260x48.png`;
   }
 
-  getReviewBody():string {
+  getReviewTitle(): string {
+    if(this.review.reviewTitle.length > 40)
+      return this.review.reviewTitle.substr(0, 40) + "...";
+    return this.review.reviewTitle;
+  }
+
+  getReviewBody(): string {
     if(this.review.reviewBody.length > 140)
       return this.review.reviewBody.substr(0, 140) + " [...]";
     return this.review.reviewBody;
