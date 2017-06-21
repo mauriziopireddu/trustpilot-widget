@@ -18,8 +18,8 @@ export class ReviewDetailComponent {
   }
 
   getReviewTitle(): string {
-    if(this.review.reviewTitle.length > 40)
-      return this.review.reviewTitle.substr(0, 40) + "...";
+    if(this.review.reviewTitle.length > 20)
+      return this.review.reviewTitle.substr(0, 20) + "...";
     return this.review.reviewTitle;
   }
 

@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, Input, ViewChild, OnInit, ElementRef } from '@angular/core';
 
 @Component({
   selector: 'review-star-rating',
@@ -7,14 +7,20 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class ReviewStarRatingComponent implements OnInit {
   @Input() starRating: number;
-  fullStars;
+  private stars;
 
   constructor() { }
 
   ngOnInit() {
-    console.log(this.starRating);
-    this.fullStars = Array(3).fill(1);
-    console.log(this.fullStars);
+    this.stars = this.range(1, this.starRating);
+  }
+
+  private range(start: number, end: number) {
+    const foo: number[] = [];
+    for (let i = start; i <= end; i++) {
+      foo.push(i);
+    }
+    return foo;
   }
 
 }
