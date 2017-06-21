@@ -1,41 +1,23 @@
 <div class="card">
   <div class="card-content">
+    <review-star-rating [starRating]="review.starRating"></review-star-rating>
+    <!--<img src="{{ getStartsImg() }}"  class="img-responsive" alt="startRating">-->
     <p class="title">
       {{ getReviewTitle() }}
     </p>
     <div class="subtitle has-text-centered">
-      <img src="{{ getStartsImg() }}"  class="img-responsive" alt="startRating">
+
+
     </div>
     <p>{{ getReviewBody() }}</p>
-    
-    <small class="has-text-right">
-      <i class="fa fa-user" aria-hidden="true"></i> 
-      <a href="#">{{ review.fullName }}</a> 
+
+    <!--<small class="has-text-right">
+      <i class="fa fa-user" aria-hidden="true"></i>
+      <a href="#">{{ review.fullName }}</a> -->
       <!-- show hyphen only if the location is available -->
-      <span *ngIf="review.location"> - </span> 
+      <!--<span *ngIf="review.location"> - </span>
       {{ review.location }}
-    </small>
+    </small>-->
 
-  </div>  
-</div>
-
-<div id="full-review"  class="card">
-  <div class="card-content">
-    <p class="title">
-      {{ getReviewTitle() }}
-    </p>
-    <div class="subtitle has-text-centered">
-      <img src="{{ getStartsImg() }}"  class="img-responsive" alt="startRating">
-    </div>
-    <p>{{ getReviewBody() }}</p>
-    
-    <small class="has-text-right">
-      <i class="fa fa-user" aria-hidden="true"></i> 
-      <a href="#">{{ review.fullName }}</a> 
-      <!-- show hyphen only if the location is available -->
-      <span *ngIf="review.location"> - </span> 
-      {{ review.location }}
-    </small>
-
-  </div>  
+  </div>
 </div>

@@ -7,8 +7,7 @@ import { Review } from "app/shared/review";
   styleUrls: ['./review-detail.component.sass']
 })
 export class ReviewDetailComponent {
-  @Input() 
-  review: Review;
+  @Input() review: Review;
 
   constructor() { }
 

@@ -1,16 +1,25 @@
 .card
 	margin-bottom: 3%
+	background-color: #ff5722
+	color: #FFFFFF
+	border-top: 25px solid #e64a19
+	border-bottom: 25px solid #FFFFFF
+	box-shadow: 0px 15px 10px -10px rgba(0,0,0,0.3)
+	transition: all 200ms cubic-bezier(0.25, 0.39, 0.39, 2.01)
+	&:hover
+		background-color: #e64a19
+		cursor: pointer
+		transform: scale(1.07)
+		box-shadow: 0px 25px 15px -15px rgba(0,0,0,0.3)
 	.fa
 		margin-right: 2%
 	.title
 		font-size: 1.5rem
 		margin-bottom: 13%
-		color: hsl(0, 0%, 7%)
+		color: #FFFFFF
+		font-weight: 400
 	img
 		max-width: 50%
-	
+
 	p
 		font-size: 13px
-
-#full-review
-	display: none
