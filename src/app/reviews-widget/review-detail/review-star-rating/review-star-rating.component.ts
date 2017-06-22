@@ -1,4 +1,4 @@
-import { Component, Input, ViewChild, OnInit, ElementRef } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'review-star-rating',

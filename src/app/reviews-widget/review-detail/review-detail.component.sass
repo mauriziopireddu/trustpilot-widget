@@ -1,21 +1,23 @@
+@import "../../../styles"
+
 .card
 	margin-bottom: 3%
-	background-color: #ff5722
-	color: #FFFFFF
-	border-top: 25px solid #e64a19
-	border-bottom: 25px solid #FFFFFF
-	box-shadow: 0px 15px 10px -10px rgba(0,0,0,0.3)
+	background-color: $primary
+	color: $white
+	border-top: 25px solid $dark-primary-color
+	border-bottom: 25px solid $white
+	box-shadow: 0 15px 10px -10px rgba(0,0,0,0.3)
 	transition: all 200ms cubic-bezier(0.25, 0.39, 0.39, 2.01)
 	&:hover
-		background-color: #e64a19
+		background-color: $dark-primary-color
 		transform: scale(1.07)
-		box-shadow: 0px 25px 15px -15px rgba(0,0,0,0.3)
+		box-shadow: 0 25px 15px -15px rgba(0,0,0,0.3)
 	.fa
 		margin-right: 2%
 	.title
 		font-size: 1.5rem
 		margin-bottom: 13%
-		color: #FFFFFF
+		color: $white
 		font-weight: 400
 	img
 		max-width: 50%
