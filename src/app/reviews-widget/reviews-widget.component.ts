@@ -10,6 +10,7 @@ import { Review } from "app/shared/review";
 })
 export class ReviewsWidgetComponent implements OnInit {
   private reviews:Review[];
+  private averageRating: number = 0;
 
   constructor(private reviewService: ReviewService) { }
 
@@ -17,6 +18,11 @@ export class ReviewsWidgetComponent implements OnInit {
     this.reviewService.getReviews()
       .then(res => this.reviews = res)
       .catch(err => console.log(err));
+
+    this.reviewService.getAverageRating()
+      .then(res => this.averageRating = res)
+      .catch(err => console.log(err))
   }
+
 
 }

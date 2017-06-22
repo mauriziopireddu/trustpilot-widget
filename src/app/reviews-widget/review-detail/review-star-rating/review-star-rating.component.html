@@ -1,5 +1,8 @@
-<div>
-  <span class="rating">
+<div *ngIf="stars">
+  <span class="rating has-text-left">
     <i *ngFor="let i of stars" class="fa fa-star" aria-hidden="true"></i>
+  </span>
+  <span *ngIf="viewCompleteRating" class="rating has-text-right">
+    <i *ngFor="let i of emptyStars" class="fa fa-star-o" aria-hidden="true"></i>
   </span>
 </div>

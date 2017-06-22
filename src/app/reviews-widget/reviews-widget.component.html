@@ -1,7 +1,13 @@
 <section class="hero is-dark">
     <div class="hero-header">
       <div class="container">
-        <!--<img src="assets/trustpilot-logo-light-bg-120x18.png" alt="trustpilot-logo">-->
+        <a href="https://www.trustpilot.com/">
+          <img src="assets/trustpilot-logo-dark-bg-120x18.png" alt="trustpilot-logo" align="middle">
+        </a>
+        <div *ngIf="this.averageRating > 0">
+          <review-star-rating [starRating]="this.averageRating" [viewCompleteRating]="true"></review-star-rating>
+        </div>
+
       </div>
     </div>
     <div class="hero-body container">

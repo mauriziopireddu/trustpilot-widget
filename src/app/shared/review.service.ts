@@ -20,13 +20,29 @@ export class ReviewService {
       .catch(this.handleError);
   }
 
-  // Just for demo pourpouse and because of the small number of reviews available, 
+  getAverageRating():Promise<number> {
+    return this.http.get('../assets/reviews.json')
+      .toPromise()
+      .then(reviews => reviews.json() || {})
+      .then(reviews => this.calculateAvgRating(reviews))
+      .catch(this.handleError);
+
+  }
+
+  private calculateAvgRating(reviews) {
+    let avg = Math.floor(reviews.reduce((a, b) => {
+        return a + +b.starRating;
+      }, 0) / reviews.length)
+    return avg;
+  }
+
+  // Just for demo pourpouse and because of the small number of reviews available,
   // I'm filtering client side. In a real world app, this is server responability
   private keepSomeReviews(reviews, numberOfReviewsToKeep: number): Promise<Review[]>{
     let reviewsToRemove: number = reviews.length - numberOfReviewsToKeep;
 
-    while(reviewsToRemove > 0) {      
-      let toRemove = Math.floor(Math.random() * reviews.length);    
+    while(reviewsToRemove > 0) {
+      let toRemove = Math.floor(Math.random() * reviews.length);
       reviews.splice(toRemove, 1);                                  // Remove a random element using the toRemove index
       reviewsToRemove--;
     }
