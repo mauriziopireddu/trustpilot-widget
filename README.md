@@ -24,6 +24,7 @@ The project is organized by features (as suggested in the best practices section
 1. **reviews-widget:** this is the main component. It calls the review service to retrieve the data and instantiates the review-details components
 2. **review-detail:** it represents a review
 3. **start-rating:** it renders the stars of a review. As it is used multiple times in the demo, it's located in the *shared* folder
+
 #### Services
 **review.service:** retrieves the data from the *review.json* file. The reviews are chosen at random using Durstenfeld shuffle algorithm as its running time is O(n)
 
