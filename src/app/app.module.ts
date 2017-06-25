@@ -5,14 +5,14 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import { ReviewsWidgetComponent } from './reviews-widget/reviews-widget.component';
 import { ReviewDetailComponent } from './reviews-widget/review-detail/review-detail.component';
-import { ReviewStarRatingComponent } from './reviews-widget/review-detail/review-star-rating/review-star-rating.component';
+import { StarRatingComponent } from './shared/star-rating/star-rating.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ReviewsWidgetComponent,
     ReviewDetailComponent,
-    ReviewStarRatingComponent
+    StarRatingComponent
   ],
   imports: [ BrowserModule, HttpModule],
   providers: [],

@@ -1,6 +1,6 @@
 <div class="card">
   <div class="card-content">
-    <review-star-rating [starRating]="review.starRating"></review-star-rating>
+    <star-rating [starRating]="review.starRating"></star-rating>
     <!--<img src="{{ getStartsImg() }}"  class="img-responsive" alt="startRating">-->
     <p class="title is-4 has-text-centered">
       {{ getReviewTitle() }}
@@ -10,15 +10,6 @@
 
     </div>
     <p>{{ getReviewBody() }}</p>
-
-
-    <!--<small class="has-text-right">
-      <i class="fa fa-user" aria-hidden="true"></i>
-      <a href="#">{{ review.fullName }}</a> -->
-      <!-- show hyphen only if the location is available -->
-      <!--<span *ngIf="review.location"> - </span>
-      {{ review.location }}
-    </small>-->
 
   </div>
 </div>
