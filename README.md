@@ -1,28 +1,34 @@
-# TrustpilotWidget
+# Trustpilot Widget
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.1.1.
+## Run demo
+To run the demo use `npm install` and `ng serve`. 
+Navigate to `http://localhost:4200/`
 
-## Development server
+## Tools and requirements
+1. **CSS should be made with a CSS precompiler:** the project uses SASS
+2. **You can use all third party JS libraries**
+3. **All HTML/SCSS/CSS and JS, needs to be custom made... i.e. by you**
+4. **Use 'Helvetica Neue', Arial, Helvetica, sans-serif; for the font stack:**
+ the custom font-family is defined in *style.sass* and it is used in all of the demo
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+## Technologies
+* [Angular 4](https://angular.io)
+* [Bulma.io](http://bulma.io/)
+* [FontAwesome](http://fontawesome.io/)
 
-## Code scaffolding
+## Code organization
+The project is organized by features (as suggested in the best practices section of Angular documentation)
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|module`.
+#### Components
+1. **reviews-widget:** this is the main component. It calls the review service to retrieve the data and instantiates the review-details components
+2. **review-detail:** it represents a review
+3. **start-rating:** it renders the stars of a review. As it is used multiple times in the demo, it's located in the *shared* folder
+#### Services
+**review.service:** retrieves the data from the *review.json* file
 
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `-prod` flag for a production build.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-Before running the tests make sure you are serving the app via `ng serve`.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+#### Model
+**review:** it represents a review
+ 
+ ## Style
+ **style.sass:** here I defined a custom color palette. The colors are inspired from the trustpilot logo and from the Material Design practices
+ 
