@@ -30,6 +30,6 @@ The project is organized by features (as suggested in the best practices section
 #### Model
 **review:** it represents a review
  
- ## Style
+## Style
  **style.sass:** here I defined a custom color palette. The colors are inspired from the trustpilot logo and from the Material Design practices
  
