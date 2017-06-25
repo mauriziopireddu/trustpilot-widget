@@ -11,12 +11,6 @@ export class ReviewDetailComponent {
 
   constructor() { }
 
-  getStartsImg():string {
-    if(this.review.starRating != 1)
-      return `assets/${this.review.starRating}-stars-260x48.png`;
-    return `assets/${this.review.starRating}-star-260x48.png`;
-  }
-
   getReviewTitle(): string {
     if(this.review.reviewTitle.length > 20)
       return this.review.reviewTitle.substr(0, 20) + "...";

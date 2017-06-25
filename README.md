@@ -24,7 +24,7 @@ The project is organized by features (as suggested in the best practices section
 2. **review-detail:** it represents a review
 3. **start-rating:** it renders the stars of a review. As it is used multiple times in the demo, it's located in the *shared* folder
 #### Services
-**review.service:** retrieves the data from the *review.json* file
+**review.service:** retrieves the data from the *review.json* file. The reviews are chosen randomize using Durstenfeld shuffle algorithm as its running time is O(n)
 
 #### Model
 **review:** it represents a review
