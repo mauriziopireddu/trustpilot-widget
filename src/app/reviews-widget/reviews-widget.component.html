@@ -6,8 +6,8 @@
         </a>
         <div *ngIf="this.averageRating > 0">
           <star-rating [starRating]="this.averageRating" [viewCompleteRating]="true"></star-rating>
+          <p class="has-text-centered">{{ this.averageRatingScale10 }} / 10 - 696 reviews</p>
         </div>
-
       </div>
     </div>
     <div class="hero-body container">

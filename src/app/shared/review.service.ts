@@ -26,13 +26,12 @@ export class ReviewService {
       .then(reviews => reviews.json() || {})
       .then(reviews => this.calculateAvgRating(reviews))
       .catch(this.handleError);
-
   }
 
   private calculateAvgRating(reviews) {
     let avg = Math.floor(reviews.reduce((a, b) => {
         return a + +b.starRating;
-      }, 0) / reviews.length)
+      }, 0) / reviews.length);
     return avg;
   }
 
