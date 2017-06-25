@@ -1,4 +1,5 @@
 # Trustpilot Widget
+![TrustpilotWidget preview](https://github.com/mauriziopireddu/trustpilotWidget/blob/master/preview.png?raw=true)
 
 ## Run demo
 To run the demo use `npm install` and `ng serve`. 
