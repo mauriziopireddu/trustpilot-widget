@@ -1,7 +1,8 @@
 # Trustpilot Widget
 ![TrustpilotWidget preview](https://github.com/mauriziopireddu/trustpilotWidget/blob/master/preview.png?raw=true)
 
-## Run demo 
+## Run demo
+Install angular cli: `npm install -g @angular/cli`
 To run the demo use `npm install` and `ng serve`. 
 Navigate to `http://localhost:4200/`
 
